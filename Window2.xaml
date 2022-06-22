@@ -1,0 +1,38 @@
+﻿<Window x:Class="MyVP1.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyVP1"
+        mc:Ignorable="d"
+        Title="Вариант 2" Height="480" Width="300">
+    <StackPanel>
+        <TextBlock Text="Название предмета" Margin="5 5 0 0"/>
+        <TextBox x:Name="NameBox" Margin="5 5 5 0" TextChanged="NameBox_TextChanged"/>
+        <TextBlock Text="Аббревиатура" Margin="5 5 0 0"/>
+        <TextBox x:Name="AbbrBox" Margin="5 5 5 0"/>
+        <TextBlock Text="Специальность" Margin="5 20 0 0"/>
+        <ComboBox x:Name="SpecBox" Margin="5 5 5 0"/>
+        <TextBlock Text="Форма обучения" Margin="5 20 0 0"/>
+        <RadioButton x:Name="DayRadio" Margin="5 5 0 0" GroupName="Form">
+            <RadioButton.Content>
+                <TextBlock Text="Дневная"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="EvenRadio" Margin="5 5 0 0" GroupName="Form">
+            <RadioButton.Content>
+                <TextBlock Text="Вечерняя"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="ZaoRadio" Margin="5 5 0 0" GroupName="Form">
+            <RadioButton.Content>
+                <TextBlock Text="Заочная"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <TextBlock x:Name="SliderText" Text="Количество кредитов: 1" Margin="5 20 0 0"/>
+        <Slider x:Name="CreditSlider" IsSnapToTickEnabled="True" TickFrequency="0.5" Minimum="1" Maximum="15" Margin="5 10 0 0" ValueChanged="CreditSlider_ValueChanged"/>
+        <CheckBox x:Name="CheckExam" Content="Экзамен" Margin="5 20 0 0"/>
+        <CheckBox x:Name="CheckCP" Content="Курсовая работа" Margin="5 10 0 0"/>
+        <Button x:Name="Сonfirm" Content="Подтвердить" Margin="0 50 0 0" Height="24" Width="100" Click="Сonfirm_Click"/>
+    </StackPanel>
+</Window>

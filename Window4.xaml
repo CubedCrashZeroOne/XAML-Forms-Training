@@ -1,0 +1,32 @@
+﻿<Window x:Class="MyVP1.Window4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyVP1"
+        mc:Ignorable="d"
+         Title="Вариант 4" Height="480" Width="300">
+    <StackPanel>
+        <TextBlock Text="ФИО" Margin="5 5 0 0"/>
+        <TextBox x:Name="NameBox" Margin="5 5 5 0"/>
+        <TextBlock Text="Пол" Margin="5 20 0 0"/>
+        <RadioButton x:Name="SexF" Margin="5 5 0 0" GroupName="Region">
+            <RadioButton.Content>
+                <TextBlock Text="Женщина"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="SexM" Margin="5 5 0 0" GroupName="Region">
+            <RadioButton.Content>
+                <TextBlock Text="Мужчина"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <TextBlock Text="Дата рождения" Margin="5 20 0 0"/>
+        <DatePicker x:Name="DateBox" Margin="5 5 5 0"/>
+        <CheckBox x:Name="CheckMarried" Content="Женат/замужем" Margin="5 20 0 0"/>
+        <TextBlock x:Name="HeightText" Text="Рост: 1 см" Margin="5 20 0 0"/>
+        <Slider x:Name="HeightSlider" IsSnapToTickEnabled="True" TickFrequency="1" Minimum="1" Maximum="250" Margin="5 10 0 0" ValueChanged="HeightSlider_ValueChanged"/>
+        <TextBlock x:Name="WeightText" Text="Вес: 1 кг" Margin="5 20 0 0"/>
+        <Slider x:Name="WeightSlider" IsSnapToTickEnabled="True" TickFrequency="1" Minimum="1" Maximum="250" Margin="5 10 0 0" ValueChanged="WeightSlider_ValueChanged"/>
+        <Button x:Name="Сonfirm"  Content="Подтвердить" Margin="0 50 0 0" Height="24" Width="100" Click="Сonfirm_Click"/>
+    </StackPanel>
+</Window>

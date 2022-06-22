@@ -1,0 +1,40 @@
+﻿<Window x:Class="MyVP1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyVP1"
+        mc:Ignorable="d"
+        Title="Вариант 1" Height="480" Width="300">
+    <StackPanel>
+        <TextBlock Text="Название игры" Margin="5 5 0 0"/>
+        <TextBox x:Name="NameBox" Margin="5 5 5 0"/>
+        <TextBlock Text="Регион" Margin="5 20 0 0"/>
+        <RadioButton x:Name="RegNA" Margin="5 5 0 0" GroupName="Region" Checked="RegNA_Checked">
+            <RadioButton.Content>
+                <TextBlock Text="NA"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="RegEU" Margin="5 5 0 0" GroupName="Region" Checked="RegNA_Checked">
+            <RadioButton.Content>
+                <TextBlock Text="EU"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="RegJP" Margin="5 5 0 0" GroupName="Region" Checked="RegNA_Checked">
+            <RadioButton.Content>
+                <TextBlock Text="JP"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton x:Name="RegAU" Margin="5 5 0 0" GroupName="Region" Checked="RegNA_Checked">
+            <RadioButton.Content>
+                <TextBlock Text="AU"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <TextBlock Text="Дата выхода" Margin="5 20 0 0"/>
+        <DatePicker x:Name="DateBox" Margin="5 5 5 0"/>
+        <CheckBox x:Name="CheckRus" Content="Переведено на русский" Margin="5 30 0 0"/>
+        <TextBlock Text="Платформа" Margin="5 20 0 0"/>
+        <ComboBox x:Name="PlatformBox" Margin="5 5 5 0"/>
+        <Button x:Name="Сonfirm"  Content="Подтвердить" Margin="0 50 0 0" Height="24" Width="100" Click="Сonfirm_Click"/>
+    </StackPanel>
+</Window>
